@@ -14,6 +14,4 @@
  *= require_self
  */
 
-p {
-  color: red;
-}
+@import "bootstrap";
