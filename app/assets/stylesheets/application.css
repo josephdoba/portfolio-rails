@@ -80,3 +80,18 @@ html {
   color: #000000;
   margin-top: 10px;
 }
+
+.tech-stack {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.side-projects {
+  display: flex;
+  justify-content: space-evenly;
+}
