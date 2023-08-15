@@ -24,9 +24,31 @@ space mono
 
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Red+Hat+Display&family=Space+Mono&display=swap");
 
+:root {
+  --blue: #014fc4;
+  --white: #f6faff;
+  --orange: #f66308;
+  --black: #000;
+  --green: #00ff00;
+  --bg-gradient: linear-gradient(to bottom, var(--black), var(--white));
+
+  /* z-index definitions: */
+
+  --background-align: 0;
+  --middleground-align: 1;
+  --frontground-align: 2;
+  --textground-align: 3;
+  --navbar-align: 4;
+}
+
 body,
 html {
   height: 100%;
+  background-color: var(--white);
+}
+
+footer {
+  background-image: var(--white);
 }
 
 /* The hero image */
@@ -53,7 +75,7 @@ html {
   font-size: 350%;
   transform: translate(-50%, -50%);
   /* color: #ffbe99; */
-  color: #ff9800;
+  color: var(--orange);
 }
 
 .about-container {
@@ -61,6 +83,7 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 5em 20em 5em;
   text-align: center;
 }
@@ -74,11 +97,13 @@ html {
 
 .paragraph {
   flex: 2;
+  padding-left: 100px;
 }
 
 .about-titles {
-  color: #000000;
-  margin-top: 10px;
+  color: var(--black);
+  /* margin-top: 10px; */
+  /* padding: 10px; */
 }
 
 .tech-stack {
