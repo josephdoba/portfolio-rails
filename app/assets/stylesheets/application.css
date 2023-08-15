@@ -45,10 +45,40 @@ body,
 html {
   height: 100%;
   background-color: var(--white);
+  font-family: "Space Mono", monospace;
+}
+
+.navbar-sticky {
+  position: sticky;
+  top: 0;
+  z-index: var(--navbar-align);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-sticky ul {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0; /* Resets default padding */
+  margin: 0; /* Resets default margin */
+  display: flex; /* Makes the list horizontal */
+  justify-content: center; /* Horizontally centers items */
+  width: 100%; /* Ensures the list spans the full width of the navbar */
+}
+
+.navbar-sticky ul li {
+  margin: 0 15px; /* Adjusts spacing between list items */
 }
 
 footer {
+  margin-top: 5%;
   background-image: var(--white);
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* The hero image */
@@ -74,7 +104,7 @@ footer {
   left: 50%;
   font-size: 350%;
   transform: translate(-50%, -50%);
-  /* color: #ffbe99; */
+  font-family: "Big Shoulders Display", cursive;
   color: var(--orange);
 }
 
@@ -104,12 +134,18 @@ footer {
 .paragraph {
   flex: 2;
   padding-left: 100px;
+  text-align: left;
+  font-size: small;
 }
 
 .about-titles {
   color: var(--black);
   /* margin-top: 10px; */
   /* padding: 10px; */
+}
+.about-titles {
+  color: var(--black);
+  font-family: "Red Hat Display", sans-serif;
 }
 
 .tech-stack {
@@ -134,7 +170,7 @@ footer {
   display: flex;
   text-align: center;
   justify-content: center;
-  font-family: "Space Mono", monospace;
+  font-family: "big shoulders display", cursive;
   font-size: 25px;
   z-index: var(--textground-align);
 }
@@ -161,7 +197,7 @@ footer {
     animation-timing-function: cubic-bezier(0.1, 0, 0.1, 1);
   }
   100% {
-    text-shadow: 0 0 5px var(--blue);
+    text-shadow: 0 0 10px var(--blue);
     animation-timing-function: cubic-bezier(0.1, 0.5, 0.9, 0.5);
   }
 }
