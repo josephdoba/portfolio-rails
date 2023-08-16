@@ -209,7 +209,7 @@ footer {
   width: 100%;
 }
 
-.photo:hover .photo-container {
+.photo .photo-container:hover {
   box-shadow: 0 15px 30px var(--orange);
   transform: scale(1.03);
 }
