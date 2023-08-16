@@ -77,7 +77,16 @@ html {
   text-decoration: none;
   color: var(--orange);
   font-family: "space mono", monospace;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   font-size: 20px;
+}
+
+.navbar-sticky ul li a:hover {
+  text-decoration: none;
+  color: var(--white);
+  font-family: "space mono", monospace;
+  font-size: 20px;
+  box-shadow: inset 100px 0 0 0 var(--orange);
 }
 
 footer {
@@ -114,7 +123,55 @@ footer {
   transform: translate(-50%, -50%);
   font-family: "Big Shoulders Display", cursive;
   color: var(--orange);
+  /* This transition is for the normal state */
+  transition: color 0.01s ease, text-shadow 0.01s ease;
 }
+
+/* hover over effects for catch-phrase */
+.hero-text .catch-phrase span {
+  /* On hover out, the transition will last for 5 seconds */
+  transition: color 3s ease, text-shadow 3s ease;
+}
+
+.hero-text .catch-phrase span:hover {
+  color: var(--green);
+  text-shadow: 0 0 5px var(--blue);
+  /* On hover, the transition will happen quickly */
+  transition: color 0.1s ease, text-shadow 0.1s ease;
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.ripple::before,
+.ripple::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: currentColor;
+  opacity: 0.4;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.ripple:hover::before,
+.ripple:hover::after {
+  transform: translate(-50%, -50%) scale(4);
+  opacity: 0;
+}
+
+.ripple::after {
+  transition-delay: 0.2s; /* Delay second ripple */
+}
+
+/* physics for catch phrase */
 
 .about-container {
   display: flex;
