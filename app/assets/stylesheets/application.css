@@ -22,8 +22,11 @@ red hat display
 space mono
  */
 
+/* Imports */
+
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Red+Hat+Display&family=Space+Mono&display=swap");
 
+/* Variables */
 :root {
   --blue: #014fc4;
   --white: #f6faff;
@@ -41,6 +44,8 @@ space mono
   --navbar-align: 4;
 }
 
+/* global styles */
+
 body,
 html {
   height: 100%;
@@ -48,6 +53,7 @@ html {
   font-family: "Space Mono", monospace;
 }
 
+/* Navbar styles */
 .navbar-sticky {
   position: fixed;
   top: 0;
@@ -124,13 +130,13 @@ footer {
   font-family: "Big Shoulders Display", cursive;
   color: var(--orange);
   /* This transition is for the normal state */
-  transition: color 0.01s ease, text-shadow 0.01s ease;
+  transition: color 0.1s ease, text-shadow 0.1s ease;
 }
 
 /* hover over effects for catch-phrase */
 .hero-text .catch-phrase span {
   /* On hover out, the transition will last for 5 seconds */
-  transition: color 3s ease, text-shadow 3s ease;
+  transition: color 2s ease, text-shadow 2s ease;
 }
 
 .hero-text .catch-phrase span:hover {
@@ -198,13 +204,14 @@ footer {
   transition: all 0.3s ease;
 }
 
+.photo img {
+  max-width: 400px;
+  width: 100%;
+}
+
 .photo:hover .photo-container {
   box-shadow: 0 15px 30px var(--orange);
   transform: scale(1.03);
-}
-
-.about-titles {
-  text-align: center;
 }
 
 .paragraph {
@@ -217,6 +224,8 @@ footer {
 .about-titles {
   color: var(--black);
   font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+  font-size: small;
 }
 
 .tech-stack,
@@ -265,32 +274,30 @@ footer {
   }
 }
 
-/* Media Query for Laptop screens around 1449px width */
+/* Media Queries for other screen types: */
+
+/* Laptop screens */
 @media screen and (max-width: 1449px) {
-  /* Adjusting padding for better fit */
   .about-container {
     padding: 2em 1em;
   }
 
-  /* Reducing font size for better visibility */
   .hero-text .catch-phrase {
     font-size: 250%;
   }
 
-  /* Adjusting image and text layout for narrower screens */
   .photo,
   .paragraph {
     flex-basis: 100%;
+    padding-top: 50px;
     padding-left: 30%;
     padding-right: 30%;
   }
 
-  /* Adjusting footer text size for smaller screens */
   .your-footer-text {
     font-size: 20px;
   }
 
-  /* Adjusting tech-stack, portfolio, and side-projects for better visibility and alignment */
   .tech-stack,
   .portfolio,
   .side-projects {
@@ -299,15 +306,13 @@ footer {
   }
 }
 
-/* Media Query for Mobile screens under 600px width */
+/* Mobile Devices */
 @media screen and (max-width: 600px) {
-  /* Adjusting body font size for better readability */
   body,
   html {
     font-size: 16px;
   }
 
-  /* Adjusting navbar layout and items for better fit and tap targets */
   .navbar-sticky {
     padding: 0.5rem 0.5rem;
     z-index: var(--navbar-align);
@@ -319,21 +324,20 @@ footer {
   .navbar-sticky ul li {
     margin: 0 10px;
   }
+  .navbar-content {
+    display: flex;
+  }
 
   /* Hamburger styles */
   .hamburger {
     display: none; /* Hide by default, will show on small screens */
-    font-size: 30px; /* Adjust this value as needed to change the size */
+    font-size: 50px; /* Adjust this value as needed to change the size */
     color: var(--orange); /* Adjust this to match your desired color */
     flex-direction: column;
     cursor: pointer; /* To show it's clickable */
     margin-right: 15px; /* Some spacing between the three lines */
     padding: 0.5em; /* Some padding for easier clicking on mobile devices */
     z-index: 1000;
-  }
-
-  .navbar-content {
-    display: flex;
   }
 
   @media only screen and (max-width: 768px) {
@@ -349,8 +353,6 @@ footer {
     .navbar-content.active {
       display: flex; /* Show navigation content when hamburger is clicked */
     }
-  }
-  @media only screen and (max-width: 768px) {
     .navbar-content {
       display: none; /* Hidden by default */
     }
