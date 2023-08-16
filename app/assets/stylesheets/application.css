@@ -51,7 +51,7 @@ html {
 .navbar-sticky {
   position: sticky;
   top: 0;
-  z-index: var(--navbar-align);
+  z-index: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,8 +64,8 @@ html {
   padding: 0; /* Resets default padding */
   margin: 0; /* Resets default margin */
   display: flex; /* Makes the list horizontal */
-  justify-content: center; /* Horizontally centers items */
-  width: 100%; /* Ensures the list spans the full width of the navbar */
+  justify-content: flex-end; /* Horizontally centers items */
+  width: 80%; /* Ensures the list spans the full width of the navbar */
 }
 
 .navbar-sticky ul li {
@@ -199,5 +199,88 @@ footer {
   100% {
     text-shadow: 0 0 10px var(--blue);
     animation-timing-function: cubic-bezier(0.1, 0.5, 0.9, 0.5);
+  }
+}
+
+/* Media Query for Laptop screens around 1449px width */
+@media screen and (max-width: 1449px) {
+  /* Adjusting padding for better fit */
+  .about-container {
+    padding: 2em 1em;
+  }
+
+  /* Reducing font size for better visibility */
+  .hero-text .catch-phrase {
+    font-size: 250%;
+  }
+
+  /* Adjusting image and text layout for narrower screens */
+  .photo,
+  .paragraph {
+    flex-basis: 100%;
+    padding-left: 0;
+  }
+
+  /* Adjusting footer text size for smaller screens */
+  .your-footer-text {
+    font-size: 20px;
+  }
+
+  /* Adjusting tech-stack, portfolio, and side-projects for better visibility and alignment */
+  .tech-stack,
+  .portfolio,
+  .side-projects {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Media Query for Mobile screens under 600px width */
+@media screen and (max-width: 600px) {
+  /* Adjusting body font size for better readability */
+  body,
+  html {
+    font-size: 16px;
+  }
+
+  /* Adjusting navbar layout and items for better fit and tap targets */
+  .navbar-sticky {
+    padding: 0.5rem 0.5rem;
+  }
+  .navbar-sticky ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .navbar-sticky ul li {
+    margin: 0 10px;
+  }
+
+  /* Reducing the hero text size for better fit */
+  .hero-text .catch-phrase {
+    font-size: 200%;
+  }
+
+  /* Adjusting the about container and its children elements */
+  .about-container {
+    padding: 2em 0.5em;
+  }
+  .photo,
+  .paragraph {
+    flex-basis: 100%;
+    padding-left: 0;
+    padding-top: 1em;
+  }
+
+  /* Adjusting the footer text size for better readability */
+  .your-footer-text {
+    font-size: 18px;
+  }
+
+  /* Adjusting the tech-stack, portfolio, and side-projects layout for mobile */
+  .tech-stack,
+  .portfolio,
+  .side-projects {
+    flex-direction: column;
+    align-items: center;
   }
 }
