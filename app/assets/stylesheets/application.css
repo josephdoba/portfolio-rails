@@ -189,6 +189,13 @@ footer {
   text-align: center;
 }
 
+.about-titles {
+  color: var(--black);
+  font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+  font-size: small;
+}
+
 .photo {
   flex: 1;
   display: flex;
@@ -218,13 +225,6 @@ footer {
   flex: 2;
   padding-left: 100px;
   text-align: left;
-  font-size: small;
-}
-
-.about-titles {
-  color: var(--black);
-  font-family: "Red Hat Display", sans-serif;
-  text-align: center;
   font-size: small;
 }
 
@@ -263,10 +263,15 @@ footer {
   z-index: var(--textground-align);
 }
 
+.your-footer-text p {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .your-footer-glow-animation {
   text-shadow: 0 0 5px var(--black);
   animation: footer-fade-in-out 2.5s ease-in-out infinite;
-  margin-bottom: 5%;
+  /* margin: 5% 0%; */
 }
 
 .center-text {
@@ -404,6 +409,12 @@ footer {
   /* Reducing the hero text size for better fit */
   .hero-text .catch-phrase {
     font-size: 200%;
+  }
+  .about {
+    display: flex;
+    justify-content: center;
+    padding-right: 300px;
+    padding-top: 50px;
   }
 
   /* Adjusting the about container and its children elements */

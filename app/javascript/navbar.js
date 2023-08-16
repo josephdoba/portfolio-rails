@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOM is loaded");
+console.log("Hello from navbar.js");
 
+document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
 
   if (hamburger) {
