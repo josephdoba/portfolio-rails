@@ -320,6 +320,50 @@ footer {
     margin: 0 10px;
   }
 
+  /* Hamburger styles */
+  .hamburger {
+    display: none; /* Hide initially */
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  .hamburger {
+    font-size: 30px; /* Adjust this value as needed to change the size */
+    color: var(--orange); /* Adjust this to match your desired color */
+    cursor: pointer; /* To show it's clickable */
+    padding: 10px; /* Some padding for easier clicking on mobile devices */
+    display: none; /* Hide by default, will show on small screens */
+  }
+
+  .navbar-content {
+    display: flex;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .hamburger {
+      display: block; /* Show hamburger on small screens */
+    }
+
+    .navbar-content {
+      display: none; /* Hide navigation content on small screens by default */
+      flex-direction: column; /* Make items stack vertically */
+    }
+
+    .navbar-content.active {
+      display: flex; /* Show navigation content when hamburger is clicked */
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .navbar-content {
+      display: none; /* Hidden by default */
+    }
+
+    .navbar-content.active {
+      display: flex;
+    }
+  }
+
   /* Reducing the hero text size for better fit */
   .hero-text .catch-phrase {
     font-size: 200%;
