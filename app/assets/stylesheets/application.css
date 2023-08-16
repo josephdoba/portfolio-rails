@@ -228,6 +228,22 @@ footer {
   font-size: small;
 }
 
+/* tech stack section: */
+
+.tech-block {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 2px solid #333;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tech-block:active {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 .tech-stack,
 .portfolio,
 .side-projects {
@@ -256,6 +272,29 @@ footer {
 .center-text {
   text-align: center;
   /* color: var(--black); */
+}
+
+.card-container {
+  display: flex;
+  gap: 1rem; /* provides spacing between cards */
+  flex-wrap: wrap; /* allows cards to wrap to the next line on smaller screens */
+  justify-content: space-around; /* evenly distribute the space around the cards */
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  width: calc(
+    33% - 1rem
+  ); /* each card takes up about a third of the container's width, minus the gap */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transitions for hover effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+.card:hover {
+  transform: scale(1.05); /* slightly enlarge the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* deeper shadow for more depth on hover */
 }
 
 @keyframes footer-fade-in-out {
