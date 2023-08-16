@@ -170,7 +170,7 @@ footer {
   display: flex;
   text-align: center;
   justify-content: center;
-  font-family: "big shoulders display", cursive;
+  font-family: "space mono", monospace;
   font-size: 25px;
   z-index: var(--textground-align);
 }
