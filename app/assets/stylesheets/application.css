@@ -127,25 +127,27 @@ footer {
 }
 
 .photo {
-  max-width: 100%;
-  height: auto;
-  width: auto\9; /* ie8 */
   flex: 1;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 20px var(--blue);
   align-items: center;
-  transition: all 0.3s ease;
-  /* border: solid var(--orange) 1px; */
-  /* border: solid var(--green) 1px; */
-  /* border: solid var(--blue) 1px; */
-  border: solid var(--black) 1px;
 }
 
-.photo:hover {
-  /* transform: perspective(450px) rotateX(10deg); Bends the card down */
-  box-shadow: 0 10px 20px var(--orange); /* Adds shadow when hovered */
+.photo-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 15px 25px var(--blue);
+  transition: all 0.3s ease;
+}
+
+.photo:hover .photo-container {
+  box-shadow: 0 15px 30px var(--orange);
   transform: scale(1.03);
+}
+
+.about-titles {
+  text-align: center;
 }
 
 .paragraph {
