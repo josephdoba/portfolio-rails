@@ -322,18 +322,14 @@ footer {
 
   /* Hamburger styles */
   .hamburger {
-    display: none; /* Hide initially */
-    flex-direction: column;
-    cursor: pointer;
-    margin-right: 15px;
-  }
-
-  .hamburger {
+    display: none; /* Hide by default, will show on small screens */
     font-size: 30px; /* Adjust this value as needed to change the size */
     color: var(--orange); /* Adjust this to match your desired color */
+    flex-direction: column;
     cursor: pointer; /* To show it's clickable */
-    padding: 10px; /* Some padding for easier clicking on mobile devices */
-    display: none; /* Hide by default, will show on small screens */
+    margin-right: 15px; /* Some spacing between the three lines */
+    padding: 0.5em; /* Some padding for easier clicking on mobile devices */
+    z-index: 1000;
   }
 
   .navbar-content {
