@@ -49,27 +49,35 @@ html {
 }
 
 .navbar-sticky {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 0;
+  right: 0;
+  z-index: var(--navbar-align);
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  align-items: normal;
   padding: 0.5rem 1rem;
 }
 
 .navbar-sticky ul {
-  list-style-type: none; /* Removes bullet points */
-  padding: 0; /* Resets default padding */
-  margin: 0; /* Resets default margin */
-  display: flex; /* Makes the list horizontal */
-  justify-content: flex-end; /* Horizontally centers items */
-  width: 80%; /* Ensures the list spans the full width of the navbar */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
 }
 
 .navbar-sticky ul li {
-  margin: 0 15px; /* Adjusts spacing between list items */
+  margin: 0 15px;
+  color: var(--orange);
+}
+
+.navbar-sticky ul li a {
+  text-decoration: none;
+  color: var(--orange);
+  font-family: "space mono", monospace;
+  font-size: 20px;
 }
 
 footer {
@@ -87,7 +95,7 @@ footer {
   background-image: url(hero_background.png);
 
   /* Set a specific height */
-  height: 38%;
+  min-height: 38%;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -119,16 +127,25 @@ footer {
 }
 
 .photo {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
   flex: 1;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 10px 20px var(--blue);
   align-items: center;
   transition: all 0.3s ease;
+  /* border: solid var(--orange) 1px; */
+  /* border: solid var(--green) 1px; */
+  /* border: solid var(--blue) 1px; */
+  border: solid var(--black) 1px;
 }
 
 .photo:hover {
-  transform: perspective(500px) rotateX(10deg); /* Bends the card down */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow when hovered */
+  /* transform: perspective(450px) rotateX(10deg); Bends the card down */
+  box-shadow: 0 10px 20px var(--orange); /* Adds shadow when hovered */
+  transform: scale(1.03);
 }
 
 .paragraph {
@@ -140,24 +157,11 @@ footer {
 
 .about-titles {
   color: var(--black);
-  /* margin-top: 10px; */
-  /* padding: 10px; */
-}
-.about-titles {
-  color: var(--black);
   font-family: "Red Hat Display", sans-serif;
 }
 
-.tech-stack {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.portfolio {
-  display: flex;
-  justify-content: space-evenly;
-}
-
+.tech-stack,
+.portfolio,
 .side-projects {
   display: flex;
   justify-content: space-evenly;
@@ -218,7 +222,8 @@ footer {
   .photo,
   .paragraph {
     flex-basis: 100%;
-    padding-left: 0;
+    padding-left: 30%;
+    padding-right: 30%;
   }
 
   /* Adjusting footer text size for smaller screens */
@@ -246,6 +251,7 @@ footer {
   /* Adjusting navbar layout and items for better fit and tap targets */
   .navbar-sticky {
     padding: 0.5rem 0.5rem;
+    z-index: var(--navbar-align);
   }
   .navbar-sticky ul {
     width: 100%;
