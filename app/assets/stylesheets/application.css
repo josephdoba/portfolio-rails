@@ -319,6 +319,7 @@ footer {
 .side-projects {
   display: flex;
   justify-content: space-evenly;
+  min-height: 100%;
 }
 
 /* Footer text  */
