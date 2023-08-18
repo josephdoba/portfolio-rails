@@ -22,7 +22,9 @@ red hat display
 space mono
  */
 
+/* --------------------------------------- */
 /* Imports */
+/* --------------------------------------- */
 
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Red+Hat+Display&family=Space+Mono&display=swap");
 
@@ -51,6 +53,7 @@ html {
   height: 100%;
   background-color: var(--white);
   font-family: "Space Mono", monospace;
+  scroll-padding-bottom: 1200px; /* Adjust value as required */
 }
 
 /* Navbar styles */
@@ -95,16 +98,10 @@ html {
   box-shadow: inset 100px 0 0 0 var(--orange);
 }
 
-footer {
-  margin-top: 5%;
-  background-image: var(--white);
-  /* text-align: center; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+/* --------------------------------------- */
 /* The hero image */
+/* --------------------------------------- */
+
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: url(hero_background.png);
@@ -146,38 +143,9 @@ footer {
   transition: color 0.1s ease, text-shadow 0.1s ease;
 }
 
-.ripple {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.ripple::before,
-.ripple::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background-color: currentColor;
-  opacity: 0.4;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.5s, opacity 0.5s;
-}
-
-.ripple:hover::before,
-.ripple:hover::after {
-  transform: translate(-50%, -50%) scale(4);
-  opacity: 0;
-}
-
-.ripple::after {
-  transition-delay: 0.2s; /* Delay second ripple */
-}
-
-/* physics for catch phrase */
+/* --------------------------------------- */
+/* About Section: */
+/* --------------------------------------- */
 
 #about {
   display: flex;
@@ -239,32 +207,6 @@ footer {
   font-size: small;
 }
 
-/* tech stack section: */
-/* 
-.tech-stack {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 5em 20em 5em;
-  text-align: center;
-}
-
-.tech-block {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px;
-  border: 2px solid #333;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.tech-block:active {
-  transform: scale(1.05);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-} */
-
-/* tech stack section: */
 .tech-stack {
   display: flex;
   flex-direction: column;
@@ -315,14 +257,41 @@ footer {
   }
 }
 
-.portfolio,
-.side-projects {
+/* --------------------------------------- */
+/* Portfolio Sections */
+/* --------------------------------------- */
+
+#projects {
   display: flex;
-  justify-content: space-evenly;
-  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
 }
 
-/* Footer text  */
+.portfolio {
+  min-height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.side-projects {
+  min-height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* --------------------------------------- */
+/* Footer  */
+/* --------------------------------------- */
+
+footer {
+  margin-top: 5%;
+  background-image: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .your-footer-text {
   position: absolute;
   color: var(--white);
@@ -342,7 +311,6 @@ footer {
 .your-footer-glow-animation {
   text-shadow: 0 0 5px var(--black);
   animation: footer-fade-in-out 2.5s ease-in-out infinite;
-  /* margin: 5% 0%; */
 }
 
 .center-text {
@@ -475,40 +443,40 @@ footer {
     .navbar-content.active {
       display: flex;
     }
-  }
 
-  /* Reducing the hero text size for better fit */
-  .hero-text .catch-phrase {
-    font-size: 200%;
-  }
-  .about {
-    display: flex;
-    justify-content: center;
-    padding-right: 300px;
-    padding-top: 50px;
-  }
+    /* Reducing the hero text size for better fit */
+    .hero-text .catch-phrase {
+      font-size: 200%;
+    }
+    .about {
+      display: flex;
+      justify-content: center;
+      padding-right: 300px;
+      padding-top: 50px;
+    }
 
-  /* Adjusting the about container and its children elements */
-  .about-container {
-    padding: 2em 0.5em;
-  }
-  .photo,
-  .paragraph {
-    flex-basis: 100%;
-    padding-left: 0;
-    padding-top: 1em;
-  }
+    /* Adjusting the about container and its children elements */
+    .about-container {
+      padding: 2em 0.5em;
+    }
+    .photo,
+    .paragraph {
+      flex-basis: 100%;
+      padding-left: 0;
+      padding-top: 1em;
+    }
 
-  /* Adjusting the footer text size for better readability */
-  .your-footer-text {
-    font-size: 18px;
-  }
+    /* Adjusting the footer text size for better readability */
+    .your-footer-text {
+      font-size: 18px;
+    }
 
-  /* Adjusting the tech-stack, portfolio, and side-projects layout for mobile */
-  .tech-stack,
-  .portfolio,
-  .side-projects {
-    flex-direction: column;
-    align-items: center;
+    /* Adjusting the tech-stack, portfolio, and side-projects layout for mobile */
+    .tech-stack,
+    .portfolio,
+    .side-projects {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
