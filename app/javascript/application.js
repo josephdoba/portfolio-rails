@@ -4,3 +4,4 @@ import "controllers";
 import "./interactive_card";
 import "./navbar";
 import "./tech_stack_physics";
+import "./swiper";
