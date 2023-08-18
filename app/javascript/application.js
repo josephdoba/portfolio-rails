@@ -3,3 +3,4 @@ import "@hotwired/turbo-rails";
 import "controllers";
 import "./interactive_card";
 import "./navbar";
+import "./tech_stack_physics";

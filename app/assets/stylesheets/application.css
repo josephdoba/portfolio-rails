@@ -110,7 +110,7 @@ footer {
   background-image: url(hero_background.png);
 
   /* Set a specific height */
-  min-height: 38%;
+  min-height: 100%;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -179,6 +179,17 @@ footer {
 
 /* physics for catch phrase */
 
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.about {
+  min-height: 100%;
+}
+
 .about-container {
   display: flex;
   align-items: center;
@@ -229,6 +240,15 @@ footer {
 }
 
 /* tech stack section: */
+/* 
+.tech-stack {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5em 20em 5em;
+  text-align: center;
+}
 
 .tech-block {
   display: inline-block;
@@ -242,9 +262,59 @@ footer {
 .tech-block:active {
   transform: scale(1.05);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+} */
+
+/* tech stack section: */
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0em 5em 5em;
+  text-align: center;
 }
 
-.tech-stack,
+.main-stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em; /* Add space between the main stack and the others */
+}
+
+.tech-block {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1px solid #333;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tech-block:active {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stack-container {
+  border: 1px solid #333;
+  animation: stack-container-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes stack-container-glow {
+  0% {
+    border: 2px solid var(--blue);
+    animation-timing-function: cubic-bezier(0.1, 0.5, 0.9, 0.5);
+  }
+  50% {
+    border: 2px solid var(--orange);
+    animation-timing-function: cubic-bezier(0.1, 0.5, 0.9, 0.5);
+  }
+  100% {
+    border: 2px solid var(--blue);
+    animation-timing-function: cubic-bezier(0.1, 0.5, 0.9, 0.5);
+  }
+}
+
 .portfolio,
 .side-projects {
   display: flex;
