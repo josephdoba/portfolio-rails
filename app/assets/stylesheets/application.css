@@ -188,6 +188,7 @@ html {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 5px;
   box-shadow: 0 15px 25px var(--blue);
   transition: all 0.3s ease;
 }
@@ -195,6 +196,7 @@ html {
 .photo img {
   max-width: 400px;
   width: 100%;
+  border-radius: 5px;
 }
 
 .photo .photo-container:hover {
@@ -228,6 +230,7 @@ html {
 .tech-block {
   display: inline-block;
   padding: 10px 20px;
+  border-radius: 5px;
   margin: 10px;
   border: 1px solid #333;
   cursor: pointer;
@@ -241,6 +244,7 @@ html {
 
 .stack-container {
   border: 1px solid #333;
+  border-radius: 5px;
   animation: stack-container-glow 2.5s ease-in-out infinite;
 }
 
@@ -291,10 +295,25 @@ html {
   height: 100vh; /* This will make the swiper container take up the full screen height */
 }
 
+.swiper {
+  width: 30%;
+  height: 30%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
 .card {
   height: 50%;
   width: 80%;
   margin: 0 auto; /* This will center the card horizontally */
+  border-radius: 5px;
   padding: 20px; /* Add some space inside the card */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better aesthetics */
   text-align: center; /* Center the text inside the card */
@@ -306,6 +325,53 @@ html {
   align-items: center; /* Vertical alignment */
   justify-content: center; /* Horizontal alignment */
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 15%;
+}
+
+/*
+.swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: rgb(0, 140, 255);
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
+}
+*/
 
 /* --------------------------------------- */
 /* Footer  */
@@ -355,18 +421,18 @@ footer {
 .card {
   border: 1px solid #ddd;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 2px;
   /* width: calc(
     33% - 1rem
   ); each card takes up about a third of the container's width, minus the gap */
   width: 40%;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transitions for hover effects */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  box-shadow: 0 4px 8px var(--blue); /* subtle shadow for depth */
 }
 
 .card:hover {
   transform: scale(1.05); /* slightly enlarge the card on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* deeper shadow for more depth on hover */
+  box-shadow: 0 8px 16px var(--orange); /* deeper shadow for more depth on hover */
 }
 
 @keyframes footer-fade-in-out {
@@ -414,6 +480,7 @@ footer {
   .side-projects {
     flex-direction: column;
     align-items: center;
+    border-radius: 5px;
   }
 }
 
