@@ -28,7 +28,7 @@ space mono
 
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Red+Hat+Display&family=Space+Mono&display=swap");
 
-@import "swiper/swiper-bundle.min";
+/* @import "swiper/swiper-bundle.min"; */
 
 /* Variables */
 :root {
@@ -298,6 +298,11 @@ html {
 .swiper {
   width: 30%;
   height: 30%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
 }
 
 .swiper-slide {
@@ -307,6 +312,13 @@ html {
   border-radius: 18px;
   font-size: 22px;
   font-weight: bold;
+  background-position: center;
+  background-size: cover;
+}
+.swiper-slide img {
+  display: block;
+  width: 50%;
+  align-content: center;
 }
 
 .card {

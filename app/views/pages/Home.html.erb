@@ -109,6 +109,7 @@
             <div class="card">
                 <h3>Portfolio (this website)</h3>
                 <p>Built with Ruby on Rails 7. Created for personal interest and branding.</p>
+                <img src="https://swiperjs.com/demos/images/nature-1.jpg">
             <a href="https://github.com/josephdoba/portfolio-rails" target="_blank">Github</a>
           </div>
           </div>
@@ -133,6 +134,51 @@
             <a href="https://github.com/josephdoba/joinus" target="_blank">Github</a>
             </div>
           </div>
+     <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cube",
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+          
+
+
+   <div class="swiper-pagination"></div>
+   <div class="swiper-button-prev"></div>
+   <div class="swiper-button-next"></div>
+   <div class="swiper-scrollbar"></div>
     </div>
 </div>
 </section>
@@ -160,9 +206,6 @@
       <p>Made with <i class="bi bi-suit-heart-fill"></i> in Victoria BC</p>
     </div>
   </footer>
-
-  
-  </script>
 </body>
 </html>
 
