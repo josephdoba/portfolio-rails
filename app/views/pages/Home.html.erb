@@ -95,47 +95,54 @@
 
   
   <h3 id="projects">Portfolio Projects</h3>
-  <section class="portfolio">
-    <div class="card-container">
-    <div class="swiper-container">
-  <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
+<section class="portfolio">
 
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <div class="card">
-                <h3>Portfolio (this website)</h3>
-                <p>Built with Ruby on Rails 7. Created for personal interest and branding.</p>
-                <img src="https://swiperjs.com/demos/images/nature-1.jpg">
-            <a href="https://github.com/josephdoba/portfolio-rails" target="_blank">Github</a>
-          </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-                <h3>JoinUs</h3>
-                <p>Final project for Lighthouse Labs. It allows users to arrange spontaneous meetups. I was responsible for the backend logic behind the form.</p>
-            <a href="https://github.com/josephdoba/joinus" target="_blank">Github</a>
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" class="d-block w-100" alt="Image 1">
+            <div class="carousel-caption">
+                <h5>Slide 1 Title</h5>
+                <p>Slide 1 Description</p>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-               <h3>Scheduler</h3>
-          <p>A single-page React project that allows the user to book appointments.</p>
-      <a href="https://github.com/josephdoba/scheduler" target="_blank">Github</a>
-          </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-                <h3>Backyard Wines</h3>
-                <p>Final project for Lighthouse Labs. It allows users to arrange spontaneous meetups. I was responsible for the backend logic behind the form.</p>
-            <a href="https://github.com/josephdoba/joinus" target="_blank">Github</a>
+        </div>
+        <div class="carousel-item">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" class="d-block w-100" alt="Image 2">
+            <div class="carousel-caption">
+                <h5>Slide 2 Title</h5>
+                <p>Slide 2 Description</p>
             </div>
-          </div>
-     <!-- Swiper -->
-  <div class="swiper mySwiper">
+        </div>
+        <div class="carousel-item">
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" class="d-block w-100" alt="Image 3">
+            <div class="carousel-caption">
+                <h5>Slide 3 Title</h5>
+                <p>Slide 3 Description</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+
+  <!-- Swiper -->
+  <%# <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -149,39 +156,14 @@
       <div class="swiper-slide">
         <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
       </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+      </div>
     </div>
     <div class="swiper-pagination"></div>
-  </div>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "cube",
-      grabCursor: true,
-      cubeEffect: {
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script>
-          
-
-
-   <div class="swiper-pagination"></div>
-   <div class="swiper-button-prev"></div>
-   <div class="swiper-button-next"></div>
-   <div class="swiper-scrollbar"></div>
-    </div>
-</div>
+  </div> %>
 </section>
+         
   
 <section class="side-projects">
     <h3 id="side-projects">Side Projects</h3>
@@ -210,3 +192,36 @@
 </html>
 
 
+
+ <%# <div class="swiper-slide">
+            <div class="card">
+                <h3>Portfolio (this website)</h3>
+                <p>Built with Ruby on Rails 7. Created for personal interest and branding.</p>
+                <img src="https://swiperjs.com/demos/images/nature-1.jpg">
+            <a href="https://github.com/josephdoba/portfolio-rails" target="_blank">Github</a>
+          </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <h3>JoinUs</h3>
+                <p>Final project for Lighthouse Labs. It allows users to arrange spontaneous meetups. I was responsible for the backend logic behind the form.</p>
+            <a href="https://github.com/josephdoba/joinus" target="_blank">Github</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+               <h3>Scheduler</h3>
+          <p>A single-page React project that allows the user to book appointments.</p>
+      <a href="https://github.com/josephdoba/scheduler" target="_blank">Github</a>
+          </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <h3>Backyard Wines</h3>
+                <p>Final project for Lighthouse Labs. It allows users to arrange spontaneous meetups. I was responsible for the backend logic behind the form.</p>
+            <a href="https://github.com/josephdoba/joinus" target="_blank">Github</a>
+            </div>
+          </div> %>
+  
+    <%# </div> %>
+<%# </section> %>
