@@ -284,24 +284,6 @@ html {
 /* Carousel section */
 /* --------------------------------------- */
 
-/* .swiper {
-  width: 75%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 75%;
-} */
-
 .carousel {
   max-width: 50%; /* Or whatever maximum width you desire */
   margin: 0 auto; /* This centers the carousel if it's less than 100% width */
@@ -315,22 +297,18 @@ html {
 }
 
 .carousel-caption {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Adds a semi-transparent background to the caption for better readability */
-  border-radius: 10px; /* Optional: adds rounded corners to the caption box */
-  padding: 10px; /* Space between the text and the edges of the caption box */
+  background-color: rgba(0, 0, 0, 0.5);
+
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .carousel-indicators li {
-  background-color: #888; /* Changes the color of the inactive slide indicators */
+  background-color: #888;
 }
 
 .carousel-indicators .active {
-  background-color: #555; /* Changes the color of the active slide indicator */
+  background-color: #555;
 }
 
 /* --------------------------------------- */
