@@ -275,7 +275,7 @@ html {
 }
 
 .portfolio {
-  min-height: 100%;
+  min-height: 80%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -303,12 +303,20 @@ html {
   padding: 10px;
 }
 
+.carousel-indicators {
+  position: relative;
+}
+
+.carousel-indicators [data-bs-target="#myCarousel"] {
+  background-color: var(--blue);
+}
+
 .carousel-indicators li {
-  background-color: #888;
+  background-color: var(--blue);
 }
 
 .carousel-indicators .active {
-  background-color: #555;
+  background-color: var(--orange);
 }
 
 /* --------------------------------------- */
