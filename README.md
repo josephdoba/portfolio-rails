@@ -4,25 +4,28 @@ Welcome to my personal portfolio page! This repository showcases my projects, sk
 
 ## Features:
 
-- Responsive Design: The portfolio is optimized for desktop, tablet, and mobile views.
 - Dynamic Projects Showcase: Interactive sliders to browse through my projects.
 - Contact Modal: A modal to get in touch with me, always looking forward to new opportunities and collaborations.
-
-Technologies Used: Highlight of the tech stack and tools used in building this portfolio.
+- Subtle CSS Animations and flare
 
 ## Tech Stack:
 
 - Ruby 3.2.1
 - Ruby on Rails 7
 - Bootstrap 5
-- Matter.js
 - Swiper.js
+
+### Planned Features:
+
+- enhancements for responsive Design to optimize it for desktop, tablet, and mobile views.
+- streamlined Carousel effect
+- minor bug fixes
 
 #### Release history:
 
 - v1.0 - August 20th 2023.
 
-Acknowledgments:
+#### Acknowledgments:
 
 Icons and logos sourced from FontAwesome and Other Resource.
 Images sourced from Unsplash.
