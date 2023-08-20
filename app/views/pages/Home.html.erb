@@ -37,11 +37,44 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#side-quests">SideQuests</a></li>
       <li><a href="https://medium.com/@itsjoba" target="_blank">Articles</a></li>
-      <li><a href="#contact">Contact</a></li> <%# popup modal to links and contact form%>
+      <li><a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a></li>
     </ul>
   </div>
   </nav>
   </header>
+
+  <%# Modal contact popup %>
+
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Get in touch:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <img class="modal-photo" src="https://media.licdn.com/dms/image/C4D03AQG_LLi80LYL6g/profile-displayphoto-shrink_800_800/0/1517023993322?e=1694044800&v=beta&t=3biQKkKUw8RcUgnMPcKxtXgoWfnHNUhFEL5BfGS_wjc" alt="Profile Photo">
+
+        <!-- Your contact information goes here -->
+        
+        <p>josephdoba@gmail.com</p>
+        <p>(+1)778-678-5622</p>
+        <a href="https://www.linkedin.com/in/joseph-aj-doba/">LinkedIn</a>
+        <a href="https://github.com/josephdoba">Github</a>
+        <br>
+        <p>Thank you for your time!</p>
+
+
+        <!-- Add any other relevant contact information -->
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
   
 <section class="about">
   <h3 id="about" >About</h3>
