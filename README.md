@@ -1,24 +1,29 @@
-# README
+Welcome to my personal portfolio page! This repository showcases my projects, skills, and experiences as a developer.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- [Live Demo](https://www.josephdoba.com)
 
-Things you may want to cover:
+## Features:
 
-* Ruby version
+- Responsive Design: The portfolio is optimized for desktop, tablet, and mobile views.
+- Dynamic Projects Showcase: Interactive sliders to browse through my projects.
+- Contact Modal: A modal to get in touch with me, always looking forward to new opportunities and collaborations.
 
-* System dependencies
+Technologies Used: Highlight of the tech stack and tools used in building this portfolio.
 
-* Configuration
+## Tech Stack:
 
-* Database creation
+- Ruby 3.2.1
+- Ruby on Rails 7
+- Bootstrap 5
+- Matter.js
+- Swiper.js
 
-* Database initialization
+#### Release history:
 
-* How to run the test suite
+- v1.0 - August 20th 2023.
 
-* Services (job queues, cache servers, search engines, etc.)
+Acknowledgments:
 
-* Deployment instructions
-
-* ...
+Icons and logos sourced from FontAwesome and Other Resource.
+Images sourced from Unsplash.
+Inspired by Some Developer's Portfolio.
