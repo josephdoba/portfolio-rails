@@ -60,15 +60,32 @@ html {
 }
 
 /* Navbar styles */
-.navbar-sticky {
+/* .navbar-sticky {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: var(--navbar-align);
+  
   display: flex;
   justify-content: center;
   align-items: normal;
   padding: 0.5rem 1rem;
+  background-color: var(--blue);
+} */
+
+.navbar-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 2rem;
+  border-bottom: 1px solid #1a1a1a;
+  background-color: var(--blue);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  z-index: var(--navbar-align);
 }
 
 .navbar-sticky ul {
@@ -426,6 +443,12 @@ html {
   justify-content: center;
   align-items: center;
   padding-top: 70px;
+}
+
+.card img {
+  vertical-align: middle;
+  height: 150px;
+  width: 150px;
 }
 
 /* --------------------------------------- */
