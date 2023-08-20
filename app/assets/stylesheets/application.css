@@ -275,30 +275,79 @@ html {
 }
 
 .portfolio {
-  min-height: 80%;
+  min-height: 60%;
   display: flex;
   justify-content: space-evenly;
+}
+
+/* --------------------------------------- */
+/* Swiper Carousel Section */
+/* --------------------------------------- */
+
+.swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+  height: 50%;
+}
+
+.swiper-wrapper {
+  transition-duration: 0ms;
+  transition-delay: 0ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 /* --------------------------------------- */
 /* Carousel section */
 /* --------------------------------------- */
 
-.carousel {
-  max-width: 50%; /* Or whatever maximum width you desire */
-  margin: 0 auto; /* This centers the carousel if it's less than 100% width */
-  overflow: hidden; /* Optional: in case you want everything outside the carousel width to be hidden */
+.carousel-item {
+  transform: scale(0.8);
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.5;
 }
 
-.carousel-inner img {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* This ensures that images cover the slide */
+.carousel-item img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item.active,
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.carousel-item-next.carousel-item-left + .carousel-item,
+.carousel-item-prev.carousel-item-right + .carousel-item {
+  transform: scale(0.9);
+}
+
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+  transform: scale(0.8);
+}
+
+.carousel-item-next.carousel-item-left
+  + .carousel-item
+  + .carousel-item
+  + .carousel-item,
+.carousel-item-prev.carousel-item-right
+  + .carousel-item
+  + .carousel-item
+  + .carousel-item {
+  transform: scale(0.7);
 }
 
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.5);
-
   border-radius: 10px;
   padding: 10px;
 }
@@ -319,12 +368,17 @@ html {
   background-color: var(--orange);
 }
 
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: var(--blue);
+}
+
 /* --------------------------------------- */
 /* Side Projects Sections */
 /* --------------------------------------- */
 
 .side-projects {
-  min-height: 100%;
+  min-height: 80%;
   display: flex;
   justify-content: space-evenly;
 }
