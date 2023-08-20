@@ -98,14 +98,32 @@
 <section class="portfolio">
 
 <!-- Slider main container -->
-<div class="swiper">
+<div class="swiper mySwiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide"><%= image_tag 'portfolio_card_logo.png', alt: 'Portfolio Logo' %></div>
-    <div class="swiper-slide"><%= image_tag 'joinus_logo.png', alt: 'joinus Logo' %></div>
-    <div class="swiper-slide"><%= image_tag 'scheduler_logo.png', alt: 'scheduler Logo' %></div>
-    <div class="swiper-slide"><%= image_tag 'backyardwines_logo.png', alt: 'backyardwines_logo Logo' %></div>
+    <div class="swiper-slide"><a href="https://github.com/josephdoba/portfolio-rails" target="_blank"><img src="https://swiperjs.com/demos/images/nature-1.jpg" class="d-block w-100" alt="Image 3">
+    
+    <%# <%= image_tag 'portfolio_card_logo.png', alt: 'Portfolio Logo' %>   
+    
+    </a>
+    
+    </div>
+    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-2.jpg" class="d-block w-100" alt="Image 3">
+    
+    <%# <%= image_tag 'joinus_logo.png', alt: 'joinus Logo' %>  
+    
+    </div>
+    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-3.jpg" class="d-block w-100" alt="Image 3">
+    
+    <%# <%= image_tag 'scheduler_logo.png', alt: 'scheduler Logo' %>  
+    
+    </div>
+    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-4.jpg" class="d-block w-100" alt="Image 3">
+    
+    <%# <%= image_tag 'backyardwines_logo.png', alt: 'backyardwines_logo Logo' %>   
+    
+    </div>
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
@@ -117,7 +135,7 @@
   <!-- If we need scrollbar -->
   <div class="swiper-scrollbar"></div>
 </div>
-
+</section>
 <%# 
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <!-- Indicators -->

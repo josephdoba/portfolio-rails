@@ -55,6 +55,7 @@ html {
   height: 100%;
   background-color: var(--white);
   font-family: "Space Mono", monospace;
+  position: relative;
   scroll-padding-bottom: 90%; /* Adjust value as required */
 }
 
@@ -285,21 +286,33 @@ html {
 /* --------------------------------------- */
 
 .swiper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 50%;
-  height: 50%;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
 }
 
 .swiper-wrapper {
-  transition-duration: 0ms;
-  transition-delay: 0ms;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
 
 /* --------------------------------------- */
@@ -377,10 +390,11 @@ html {
 /* Side Projects Sections */
 /* --------------------------------------- */
 
-.side-projects {
-  min-height: 80%;
+#side-projects {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
 }
 
 /* --------------------------------------- */

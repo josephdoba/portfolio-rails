@@ -3,33 +3,17 @@
 // });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    effect: "cards",
-    cardsEffect: {
+  var swiper = new Swiper(".mySwiper", {
+    effect: "cube",
+    grabCursor: true,
+    cubeEffect: {
+      shadow: true,
       slideShadows: true,
-      rotate: true,
-      perSlideOffset: 50,
-      perSlideRotate: 5,
+      shadowOffset: 20,
+      shadowScale: 0.94,
     },
-    direction: "horizontal",
-    loop: false,
-    // depth: 50,
-
-    // If we need pagination
     pagination: {
       el: ".swiper-pagination",
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: ".swiper-scrollbar",
     },
   });
 });
