@@ -24,9 +24,3 @@ Welcome to my personal portfolio page! This repository showcases my projects, sk
 #### Release history:
 
 - v1.0 - August 20th 2023.
-
-#### Acknowledgments:
-
-Icons and logos sourced from FontAwesome and Other Resource.
-Images sourced from Unsplash.
-Inspired by Some Developer's Portfolio.
