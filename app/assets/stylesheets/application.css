@@ -292,6 +292,7 @@ html {
   min-height: 60%;
   display: flex;
   justify-content: space-evenly;
+  row-gap: 2em;
 }
 
 /* --------------------------------------- */
