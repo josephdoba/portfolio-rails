@@ -351,7 +351,8 @@ html {
 .card img {
   vertical-align: middle;
   height: 150px;
-  width: 150px;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* --------------------------------------- */
@@ -406,11 +407,20 @@ footer {
   width: 22%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px var(--blue);
+  /* Set a fixed height for the cards */
+  height: 350px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This will distribute the space inside the card evenly */
 }
 
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px var(--orange);
+}
+
+.card p {
+  min-height: 120px;
 }
 
 @keyframes footer-fade-in-out {
