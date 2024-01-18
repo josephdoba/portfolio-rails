@@ -349,11 +349,15 @@ html {
 }
 
 .card img {
-  vertical-align: middle;
-  height: 150px;
-  width: 100%;
-  object-fit: cover;
+  max-width: 150px;
+  max-height: 200px;
+  width: 125px;
+  height: 140px;
+  object-fit: contain;
+  margin: auto;
+  display: block;
 }
+
 
 /* --------------------------------------- */
 /* Footer  */
