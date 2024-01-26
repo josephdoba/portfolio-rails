@@ -1,0 +1,524 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= custom.css
+
+ */
+
+/*
+big shoulders display
+red hat display
+space mono
+ */
+
+/* --------------------------------------- */
+/* Imports */
+/* --------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Red+Hat+Display&family=Space+Mono&display=swap");
+
+/* Variables */
+:root {
+  --blue: #014fc4;
+  --white: #f6faff;
+  --orange: #f66308;
+  --black: #000;
+  --green: #00ff00;
+  --bg-gradient: linear-gradient(to bottom, var(--black), var(--white));
+
+  /* z-index definitions: */
+
+  --background-align: 0;
+  --middleground-align: 1;
+  --frontground-align: 2;
+  --textground-align: 3;
+  --navbar-align: 4;
+}
+
+/* global styles */
+
+body,
+html {
+  height: 100%;
+  background-color: var(--white);
+  font-family: "Space Mono", monospace;
+  position: relative;
+  scroll-padding-bottom: 90%; /* Adjust value as required */
+}
+
+.navbar-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 2rem;
+  border-bottom: 1px solid #1a1a1a;
+  background-color: var(--blue);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  z-index: var(--navbar-align);
+}
+
+.navbar-sticky ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+}
+
+.navbar-sticky ul li {
+  margin: 0 15px;
+  color: var(--orange);
+}
+
+.navbar-sticky ul li a {
+  text-decoration: none;
+  color: var(--orange);
+  font-family: "space mono", monospace;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-size: 20px;
+}
+
+.navbar-sticky ul li a:hover {
+  text-decoration: none;
+  color: var(--white);
+  font-family: "space mono", monospace;
+  font-size: 20px;
+  box-shadow: inset 120px 0 0 0 var(--orange);
+}
+
+/* --------------------------------------- */
+/* Hero Banner */
+/* --------------------------------------- */
+
+.hero-image {
+  background-image: url(hero_background.png);
+  min-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text .catch-phrase {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 350%;
+  transform: translate(-50%, -50%);
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--orange);
+  transition: color 0.1s ease, text-shadow 0.1s ease;
+}
+
+/* hover over effects for catch-phrase */
+.hero-text .catch-phrase span {
+  transition: color 2s ease, text-shadow 2s ease;
+}
+
+.hero-text .catch-phrase span:hover {
+  color: var(--green);
+  text-shadow: 0 0 5px var(--blue);
+  /* On hover, the transition will happen quickly */
+  transition: color 0.1s ease, text-shadow 0.1s ease;
+}
+
+/* --------------------------------------- */
+/* Contact Modal Section: */
+/* --------------------------------------- */
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+}
+.modal-photo {
+  max-width: 300px;
+  width: 50%;
+  border-radius: 5px;
+}
+/* --------------------------------------- */
+/* About Section: */
+/* --------------------------------------- */
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+}
+
+.about {
+  min-height: 100%;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5em 20em 5em;
+  text-align: center;
+}
+
+.about-titles {
+  color: var(--black);
+  font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+  font-size: small;
+}
+
+.photo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 15px 25px var(--blue);
+  transition: all 0.3s ease;
+}
+
+.photo img {
+  max-width: 400px;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.photo .photo-container:hover {
+  box-shadow: 0 15px 30px var(--orange);
+  transform: scale(1.03);
+}
+
+.paragraph {
+  flex: 2;
+  padding-left: 100px;
+  text-align: left;
+  font-size: small;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0em 5em 5em;
+  text-align: center;
+}
+
+.main-stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.tech-block {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid #333;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tech-block:active {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stack-container {
+  border: 1px solid #333;
+  border-radius: 5px;
+  animation: stack-container-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes stack-container-glow {
+  0% {
+    border: 2px solid var(--blue);
+    animation-timing-function: cubic-bezier(0.1, 0.5, 0.9, 0.5);
+  }
+  50% {
+    border: 2px solid var(--orange);
+    animation-timing-function: cubic-bezier(0.1, 0.5, 0.9, 0.5);
+  }
+  100% {
+    border: 2px solid var(--blue);
+    animation-timing-function: cubic-bezier(0.1, 0.5, 0.9, 0.5);
+  }
+}
+
+/* --------------------------------------- */
+/* Portfolio Sections */
+/* --------------------------------------- */
+
+#projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+}
+
+.portfolio {
+  min-height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  row-gap: 2em;
+}
+
+/* --------------------------------------- */
+/* Side Quests Section */
+/* --------------------------------------- */
+
+#side-quests {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+}
+
+.card img {
+  max-width: 150px;
+  max-height: 200px;
+  width: 125px;
+  height: 140px;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+
+
+/* --------------------------------------- */
+/* Footer  */
+/* --------------------------------------- */
+
+footer {
+  margin-top: 5%;
+  background-image: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.your-footer-text {
+  position: absolute;
+  color: var(--white);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "space mono", monospace;
+  font-size: 25px;
+  z-index: var(--textground-align);
+}
+
+.your-footer-text p {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.your-footer-glow-animation {
+  text-shadow: 0 0 5px var(--black);
+  animation: footer-fade-in-out 2.5s ease-in-out infinite;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 50px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 2px;
+  width: 22%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px var(--blue);
+  height: 350px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px var(--orange);
+}
+
+.card p {
+  min-height: 120px;
+}
+
+@keyframes footer-fade-in-out {
+  0% {
+    text-shadow: 0 0 5px var(--blue);
+    animation-timing-function: cubic-bezier(0.1, 0.5, 0.9, 0.5);
+  }
+  50% {
+    color: var(--orange);
+    text-shadow: 0 0 250px var(--blue);
+    animation-timing-function: cubic-bezier(0.1, 0, 0.1, 1);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--blue);
+    animation-timing-function: cubic-bezier(0.1, 0.5, 0.9, 0.5);
+  }
+}
+
+/* --------------------------------------- */
+/* --------------------------------------- */
+/* Response Design Section */
+/* --------------------------------------- */
+/* --------------------------------------- */
+
+/* Laptop screens */
+@media screen and (max-width: 1449px) {
+  .about-container {
+    padding: 2em 1em;
+  }
+
+  .hero-text .catch-phrase {
+    font-size: 250%;
+  }
+
+  .photo,
+  .paragraph {
+    flex-basis: 100%;
+    padding-top: 50px;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+
+  .your-footer-text {
+    font-size: 20px;
+  }
+
+  .tech-stack,
+  .portfolio,
+  .side-projects {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+
+  .navbar-sticky {
+    padding: 0.5rem 0.5rem;
+    z-index: var(--navbar-align);
+  }
+  .navbar-sticky ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .navbar-sticky ul li {
+    margin: 0 10px;
+  }
+  .navbar-content {
+    display: flex;
+  }
+
+  /* Hamburger styles */
+  .hamburger {
+    display: none;
+    font-size: 50px;
+    color: var(--orange);
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 0.5em;
+    z-index: 1000;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
+    .navbar-content {
+      display: none;
+      flex-direction: column;
+    }
+
+    .navbar-content.active {
+      display: flex;
+    }
+    .navbar-content {
+      display: none;
+    }
+
+    .navbar-content.active {
+      display: flex;
+    }
+
+    .hero-text .catch-phrase {
+      font-size: 200%;
+    }
+    .about {
+      display: flex;
+      justify-content: center;
+      padding-right: 300px;
+      padding-top: 50px;
+    }
+
+    .about-container {
+      padding: 2em 0.5em;
+    }
+    .photo,
+    .paragraph {
+      flex-basis: 100%;
+      padding-left: 0;
+      padding-top: 1em;
+    }
+
+    .your-footer-text {
+      font-size: 18px;
+    }
+
+    .tech-stack,
+    .portfolio,
+    .side-projects {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

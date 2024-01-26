@@ -1,34 +1,9 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- *= custom.css
-
- */
-
-/*
-big shoulders display
-red hat display
-space mono
- */
 
 /* --------------------------------------- */
 /* Imports */
 /* --------------------------------------- */
 
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Red+Hat+Display&family=Space+Mono&display=swap");
-
-/* @import "swiper/swiper-bundle.min"; */
 
 /* Variables */
 :root {
@@ -121,7 +96,6 @@ html {
 .hero-text .catch-phrase {
   text-align: center;
   position: absolute;
-  top: 50%;
   left: 50%;
   font-size: 350%;
   transform: translate(-50%, -50%);
@@ -130,7 +104,6 @@ html {
   transition: color 0.1s ease, text-shadow 0.1s ease;
 }
 
-/* hover over effects for catch-phrase */
 .hero-text .catch-phrase span {
   transition: color 2s ease, text-shadow 2s ease;
 }
@@ -138,9 +111,9 @@ html {
 .hero-text .catch-phrase span:hover {
   color: var(--green);
   text-shadow: 0 0 5px var(--blue);
-  /* On hover, the transition will happen quickly */
   transition: color 0.1s ease, text-shadow 0.1s ease;
 }
+
 
 /* --------------------------------------- */
 /* Contact Modal Section: */
@@ -296,49 +269,6 @@ html {
 }
 
 /* --------------------------------------- */
-/* Swiper Carousel Section */
-/* --------------------------------------- */
-.portfolio {
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper {
-  width: 80%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.swiper-wrapper {
-  display: flex;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 50%;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  justify-content: center;
-  align-items: center;
-  max-width: 300px;
-  border-radius: 5px;
-}
-
-/* --------------------------------------- */
 /* Side Quests Section */
 /* --------------------------------------- */
 
@@ -412,11 +342,10 @@ footer {
   width: 22%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px var(--blue);
-  /* Set a fixed height for the cards */
-  height: 350px; /* Adjust as needed */
+  height: 350px; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* This will distribute the space inside the card evenly */
+  justify-content: space-between;
 }
 
 .card:hover {
