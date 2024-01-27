@@ -31,7 +31,6 @@ html {
   background-color: var(--white);
   font-family: "Space Mono", monospace;
   position: relative;
-  scroll-padding-bottom: 90%; /* Adjust value as required */
 }
 
 .navbar-sticky {
@@ -304,7 +303,7 @@ footer {
 }
 
 .your-footer-text {
-  position: relative;
+  position: absolute;
   color: var(--white);
   display: flex;
   text-align: center;
