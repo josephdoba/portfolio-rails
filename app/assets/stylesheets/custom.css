@@ -1,0 +1,125 @@
+
+/* --------------------------------------- */
+/* --------------------------------------- */
+/* Response Design Section */
+/* --------------------------------------- */
+/* --------------------------------------- */
+
+/* Laptop screens */
+@media screen and (max-width: 1449px) {
+  .about-container {
+    padding: 2em 1em;
+  }
+
+  .hero-text .catch-phrase {
+    font-size: 250%;
+  }
+
+  .photo,
+  .paragraph {
+    flex-basis: 100%;
+    padding-top: 50px;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+
+  .your-footer-text {
+    font-size: 20px;
+  }
+
+  .tech-stack,
+  .portfolio,
+  .side-projects {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+
+  .navbar-sticky {
+    padding: 0.5rem 0.5rem;
+    z-index: var(--navbar-align);
+  }
+  .navbar-sticky ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .navbar-sticky ul li {
+    margin: 0 10px;
+  }
+  .navbar-content {
+    display: flex;
+  }
+
+  /* Hamburger styles */
+  .hamburger {
+    display: none;
+    font-size: 50px;
+    color: var(--orange);
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 0.5em;
+    z-index: 1000;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
+    .navbar-content {
+      display: none;
+      flex-direction: column;
+    }
+
+    .navbar-content.active {
+      display: flex;
+    }
+    .navbar-content {
+      display: none;
+    }
+
+    .navbar-content.active {
+      display: flex;
+    }
+
+    .hero-text .catch-phrase {
+      font-size: 200%;
+    }
+    .about {
+      display: flex;
+      justify-content: center;
+      padding-right: 300px;
+      padding-top: 50px;
+    }
+
+    .about-container {
+      padding: 2em 0.5em;
+    }
+    .photo,
+    .paragraph {
+      flex-basis: 100%;
+      padding-left: 0;
+      padding-top: 1em;
+    }
+
+    .your-footer-text {
+      font-size: 18px;
+    }
+
+    .tech-stack,
+    .portfolio,
+    .side-projects {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

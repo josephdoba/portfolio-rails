@@ -378,7 +378,6 @@ footer {
 /* Response Design Section */
 /* --------------------------------------- */
 /* --------------------------------------- */
-
 /* Laptop screens */
 @media screen and (max-width: 1449px) {
   .about-container {
@@ -408,10 +407,14 @@ footer {
     align-items: center;
     border-radius: 5px;
   }
+
+  .card p {
+    font-size: clamp(10px, 1.3vw, 16px);
+  }
 }
 
 /* Mobile Devices */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   body,
   html {
     font-size: 16px;
@@ -421,20 +424,27 @@ footer {
     padding: 0.5rem 0.5rem;
     z-index: var(--navbar-align);
   }
+
   .navbar-sticky ul {
     width: 100%;
     justify-content: space-around;
   }
+
   .navbar-sticky ul li {
     margin: 0 10px;
   }
+
   .navbar-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-content.active {
     display: flex;
   }
 
-  /* Hamburger styles */
   .hamburger {
-    display: none;
+    display: block;
     font-size: 50px;
     color: var(--orange);
     flex-direction: column;
@@ -444,56 +454,41 @@ footer {
     z-index: 1000;
   }
 
-  @media only screen and (max-width: 768px) {
-    .hamburger {
-      display: block;
-    }
+  .hero-text .catch-phrase {
+    font-size: 200%;
+  }
 
-    .navbar-content {
-      display: none;
-      flex-direction: column;
-    }
+  .about {
+    display: flex;
+    justify-content: center;
+    padding-right: 300px;
+    padding-top: 50px;
+  }
 
-    .navbar-content.active {
-      display: flex;
-    }
-    .navbar-content {
-      display: none;
-    }
+  .about-container {
+    padding: 2em 0.5em;
+  }
 
-    .navbar-content.active {
-      display: flex;
-    }
+  .photo,
+  .paragraph {
+    flex-basis: 100%;
+    padding-left: 0;
+    padding-top: 1em;
+  }
 
-    .hero-text .catch-phrase {
-      font-size: 200%;
-    }
-    .about {
-      display: flex;
-      justify-content: center;
-      padding-right: 300px;
-      padding-top: 50px;
-    }
+  .your-footer-text {
+    font-size: 18px;
+  }
 
-    .about-container {
-      padding: 2em 0.5em;
-    }
-    .photo,
-    .paragraph {
-      flex-basis: 100%;
-      padding-left: 0;
-      padding-top: 1em;
-    }
+  .tech-stack,
+  .portfolio,
+  .side-projects {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .your-footer-text {
-      font-size: 18px;
-    }
-
-    .tech-stack,
-    .portfolio,
-    .side-projects {
-      flex-direction: column;
-      align-items: center;
-    }
+  .card img {
+    height: auto;
+    max-width: 100%;
   }
 }
