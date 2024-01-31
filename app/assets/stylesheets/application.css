@@ -411,6 +411,10 @@ footer {
   .card p {
     font-size: clamp(12px, 0.9vw, 16px);
   }
+
+  .card h5 {
+    font-size: clamp(14px, 1.2vw, 18px);
+  }
 }
 
 /* Mobile Devices */
@@ -488,6 +492,6 @@ footer {
   }
   .card img {
     height: auto;
-    max-width: 100%;
+    max-width: 90%;
   }
 }
