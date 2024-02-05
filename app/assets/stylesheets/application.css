@@ -495,3 +495,82 @@ footer {
     max-width: 90%;
   }
 }
+
+/* Smaller Mobile Devices */
+@media screen and (max-width: 500px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+
+  .navbar-sticky {
+    padding: 0.5rem 0.5rem;
+    z-index: var(--navbar-align);
+  }
+
+  .navbar-sticky ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .navbar-sticky ul li {
+    margin: 0 10px;
+  }
+
+  .navbar-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-content.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 50px;
+    color: var(--orange);
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 0.5em;
+    z-index: 1000;
+  }
+
+  .hero-text .catch-phrase {
+    font-size: 200%;
+  }
+
+  .about {
+    display: flex;
+    justify-content: center;
+    padding-right: 300px;
+    padding-top: 50px;
+  }
+
+  .about-container {
+    padding: 2em 0.5em;
+  }
+
+  .photo,
+  .paragraph {
+    flex-basis: 100%;
+    padding-left: 0;
+    padding-top: 1em;
+  }
+
+  .your-footer-text {
+    font-size: 18px;
+  }
+
+  .tech-stack,
+  .portfolio,
+  .side-projects {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card img {
+    height: auto;
+    max-width: 90%;
+  }
+}
