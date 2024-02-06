@@ -500,7 +500,7 @@ footer {
 @media screen and (max-width: 500px) {
   body,
   html {
-    font-size: 16px;
+    font-size: 8px;
   }
 
   .navbar-sticky {
@@ -560,7 +560,7 @@ footer {
   }
 
   .your-footer-text {
-    font-size: 18px;
+    font-size: 8px;
   }
 
   .tech-stack,
