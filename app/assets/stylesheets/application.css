@@ -466,6 +466,7 @@ footer {
   .navbar-sticky {
     padding: 0.5rem 0.5rem;
     z-index: var(--navbar-align);
+
   }
 
   .navbar-sticky ul {
@@ -517,6 +518,8 @@ footer {
     flex-basis: 100%;
     padding-left: 0;
     padding-top: 1em;
+    display: flex;
+    justify-content: center;
   }
 
   .your-footer-text {
